@@ -1,0 +1,25 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.error-message i {
+  font-size: 1.2rem;
+}
+
+.error-message p {
+  margin: 0;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .error-message {
+    background: rgba(255, 71, 87, 0.2);
+  }
+}

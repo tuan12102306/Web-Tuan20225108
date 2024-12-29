@@ -1,0 +1,302 @@
+.profile-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.edit-button {
+  padding: 0.8rem 1.5rem;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background: #1a5dbb;
+  transform: translateY(-2px);
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.profile-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+.form-group input.error {
+  border-color: #ff4757;
+}
+
+.form-group input.disabled {
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff4757;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-button {
+  width: 100%;
+  padding: 1rem;
+  background: #2ed573;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.save-button:hover {
+  background: #26af5f;
+  transform: translateY(-2px);
+}
+
+.borrow-history {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.borrow-history h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.history-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.history-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-info img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book-info h3 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.borrow-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.borrow-dates span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background: rgba(37, 117, 252, 0.1);
+  color: #2575fc;
+}
+
+.status-badge.overdue {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+}
+
+.status-badge.returned {
+  background: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 3rem;
+  color: #7f8c8d;
+}
+
+.empty-history i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .history-item {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .book-info {
+    flex-direction: column;
+  }
+
+  .borrow-dates {
+    align-items: center;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .profile-header h1 {
+    color: #e0e0e0;
+  }
+
+  .profile-form,
+  .borrow-history {
+    background: #2c3e50;
+  }
+
+  .form-group label {
+    color: #e0e0e0;
+  }
+
+  .form-group input {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #404040;
+    color: #e0e0e0;
+  }
+
+  .form-group input.disabled {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .borrow-history h2 {
+    color: #e0e0e0;
+  }
+
+  .history-item {
+    background: #243342;
+  }
+
+  .book-info h3 {
+    color: #e0e0e0;
+  }
+
+  .borrow-dates {
+    color: #b3b3b3;
+  }
+
+  .empty-history {
+    color: #b3b3b3;
+  }
+
+  .empty-history i {
+    color: #7f8c8d;
+  }
+
+  .status-badge.active {
+    background: rgba(37, 117, 252, 0.2);
+  }
+
+  .status-badge.overdue {
+    background: rgba(255, 71, 87, 0.2);
+  }
+
+  .status-badge.returned {
+    background: rgba(46, 213, 115, 0.2);
+  }
+}

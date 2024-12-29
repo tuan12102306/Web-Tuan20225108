@@ -1,0 +1,261 @@
+.borrow-management {
+  padding: 2rem;
+}
+
+.management-header {
+  margin-bottom: 2rem;
+}
+
+.management-header h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 300px;
+}
+
+.search-form button {
+  padding: 0.8rem 1rem;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-form button:hover {
+  background: #1a5dbb;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-button {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  border-color: #2575fc;
+  color: #2575fc;
+}
+
+.filter-button.active {
+  background: #2575fc;
+  border-color: #2575fc;
+  color: white;
+}
+
+.table-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.borrows-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.borrows-table th,
+.borrows-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.borrows-table th {
+  background: #f8f9fa;
+  font-weight: 500;
+  color: #2c3e50;
+  cursor: pointer;
+  user-select: none;
+}
+
+.borrows-table th i {
+  margin-left: 0.5rem;
+}
+
+.book-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-info-cell img {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: rgba(37, 117, 252, 0.1);
+  color: #2575fc;
+}
+
+.badge-danger {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+}
+
+.badge-success {
+  background: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+}
+
+.badge-secondary {
+  background: rgba(127, 140, 141, 0.1);
+  color: #7f8c8d;
+}
+
+.return-button {
+  padding: 0.5rem 1rem;
+  background: #2ed573;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.return-button:hover {
+  background: #26af5f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .search-form input {
+    min-width: 200px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .borrow-management {
+    padding: 1rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .filter-button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .borrows-table {
+    min-width: 800px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .management-header h1 {
+    color: #e0e0e0;
+  }
+
+  .search-form input {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #404040;
+    color: #e0e0e0;
+  }
+
+  .filter-button {
+    background: #2c3e50;
+    border-color: #404040;
+    color: #b3b3b3;
+  }
+
+  .filter-button:hover {
+    border-color: #2575fc;
+    color: #2575fc;
+  }
+
+  .table-container {
+    background: #2c3e50;
+  }
+
+  .borrows-table th {
+    background: #243342;
+    color: #e0e0e0;
+  }
+
+  .borrows-table td {
+    border-color: #404040;
+    color: #e0e0e0;
+  }
+
+  .badge-primary {
+    background: rgba(37, 117, 252, 0.2);
+  }
+
+  .badge-danger {
+    background: rgba(255, 71, 87, 0.2);
+  }
+
+  .badge-success {
+    background: rgba(46, 213, 115, 0.2);
+  }
+
+  .badge-secondary {
+    background: rgba(127, 140, 141, 0.2);
+  }
+}

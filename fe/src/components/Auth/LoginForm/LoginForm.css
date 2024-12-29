@@ -1,0 +1,238 @@
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-error {
+    background: #ffe3e3;
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: shake 0.5s ease;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group label i {
+    color: #7f8c8d;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 0 4px rgba(37, 117, 252, 0.1);
+    outline: none;
+}
+
+.form-group input.error {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.error-message::before {
+    content: '⚠';
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2575fc;
+}
+
+.forgot-password {
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #1a5dbb;
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #1a5dbb;
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background: #b3b3b3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .form-group label {
+        color: #e0e0e0;
+    }
+
+    .form-group input {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: #404040;
+        color: #e0e0e0;
+    }
+
+    .form-group input:focus {
+        border-color: #2575fc;
+    }
+
+    .remember-me {
+        color: #e0e0e0;
+    }
+
+    .form-error {
+        background: rgba(231, 76, 60, 0.2);
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.form-footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.form-footer a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #6a11cb;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 2rem;
+    }
+
+    .login-form h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .login-form-container {
+        background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    }
+
+    .login-form {
+        background: rgba(30, 30, 30, 0.95);
+    }
+
+    .login-form h2 {
+        color: #e0e0e0;
+    }
+
+    .form-group label {
+        color: #e0e0e0;
+    }
+
+    .form-group input {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: #404040;
+        color: #e0e0e0;
+    }
+
+    .form-group input::placeholder {
+        color: #808080;
+    }
+
+    .form-footer {
+        color: #b3b3b3;
+    }
+}

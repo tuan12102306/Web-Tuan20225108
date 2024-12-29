@@ -1,0 +1,122 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.pagination-button {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.5rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  border-color: #2575fc;
+  color: #2575fc;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(37, 117, 252, 0.1);
+}
+
+.pagination-button.active {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  border-color: transparent;
+  color: white;
+  font-weight: 600;
+}
+
+.pagination-button:disabled {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.pagination-button.ellipsis {
+  border: none;
+  background: none;
+  cursor: default;
+}
+
+.pagination-button.ellipsis:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Hover Effects */
+.pagination-button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+/* Animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pagination-button {
+  animation: scaleIn 0.2s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .pagination {
+    gap: 0.3rem;
+  }
+
+  .pagination-button {
+    min-width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .pagination-button {
+    background: #2c3e50;
+    border-color: #404040;
+    color: #e0e0e0;
+  }
+
+  .pagination-button:hover:not(:disabled) {
+    border-color: #2575fc;
+    background: rgba(37, 117, 252, 0.1);
+  }
+
+  .pagination-button:disabled {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #666;
+  }
+
+  .pagination-button.active {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    color: white;
+  }
+
+  .pagination-button.ellipsis {
+    background: none;
+    color: #e0e0e0;
+  }
+}
